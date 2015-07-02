@@ -2,4 +2,12 @@
 	Variables
 	----------------------------------- */
 
+	$colours: (
+		"blue": rgb(2, 107, 170),
+		"blue-dark": rgb(0, 96, 193),
+		"blue-light": rgb(40, 147, 255),
+		"blue-grey": rgb(48, 62, 75),
+		"blue-grey-light": rgb(114, 131, 145)
+	);
+
 	$breakpoint-tablet: em(768px), 'no-query' true;

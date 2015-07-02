@@ -1,0 +1,50 @@
+/*
+	Header
+	----------------------------------- */
+
+	.header {
+		position: relative;
+		background: map-get($colours, "blue");
+
+		&__cell {
+
+			// Hide Desktop components
+			&--search, &--links {
+				display: none;
+			}
+
+			// Make room for mobile menu button
+			&--logo {
+				padding-left: em(50px);
+			}
+		}
+
+		@include breakpoint($breakpoint-tablet) {
+			height: em(133px);
+			padding: 0 em(20px);
+			background: white;
+
+			&__row {
+				height: em(84px);
+			}
+
+			&__cell {
+				width: percentage(1/3);
+				vertical-align: middle;
+
+				// Show Desktop components
+				&, &--search, &--links {
+					display: table-cell;
+				}
+
+				&--links {
+					text-align: right;
+				}
+
+				// Remove room for mobile menu button
+				&--logo {
+					padding-left: 0;
+				}
+			}
+		}
+	}

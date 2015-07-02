@@ -11,6 +11,13 @@
 	// Base partials
 	@import 'base/variables';
 	@import 'base/core';
+	@import 'base/grid';
 
 	// Starter partials
+	@import 'partials/button';
+	@import 'partials/menu';
 	@import 'partials/page';
+	@import 'partials/header';
+	@import 'partials/navigation';
+	@import 'partials/logo';
+	@import 'partials/search';

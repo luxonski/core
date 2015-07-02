@@ -1,0 +1,47 @@
+/*
+	Navigation
+	----------------------------------- */
+
+	.navigation {
+		$block: #{&};
+
+		// Main navigation
+		&--main {
+			background: map-get($colours, "blue");
+
+			#{$block}__button {
+				position: absolute;
+				top: 0;
+				left: 0;
+
+				width: em(50px);
+				height: em(50px);
+				padding: 0;
+
+				text-indent: em(-10000px);
+
+				background: url(/assets/img/menu.png) no-repeat;
+				background-image: linear-gradient(transparent, transparent), url(/assets/img/menu.svg);
+				background-size: em(25px) em(20px);
+				background-position: 50% 50%;
+			}
+		}
+
+		@include breakpoint($breakpoint-tablet) {
+
+			// Main navigation
+			&--main {
+				position: absolute;
+				left: 0;
+				bottom: 0;
+
+				width: 100%;
+				max-width: none;
+				height: em(49px);
+
+				#{$block}__button {
+					display: none;
+				}
+			}
+		}
+	}

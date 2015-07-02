@@ -27,6 +27,46 @@
 		<![endif]-->
 	</head>
 	<body class="page page--{{name}}">
+
+		<!-- Page header -->
+		<header class="grid header" role="banner">
+			<div class="grid__row header__row">
+				<div class="header__cell header__cell--logo">
+
+					<!-- Logo -->
+					<a href="/" class="logo logo--header">My Protein, Fuel your ambition</a>
+
+				</div>
+				<div class="header__cell header__cell--search">
+
+					<!-- Search form -->
+					<form class="header__search search">
+						<fieldset class="search__fieldset">
+							<input class="search__input" autocomplete="off" type="text" placeholder="Try Our Search" name="search">
+							<button class="search__button button button--primary" type="submit">Search</button>
+						</fieldset>
+					</form>
+
+				</div>
+				<div class="header__cell header__cell--links">
+
+					<!-- Useful links -->
+					<nav class="menu menu--links">
+						<ul class="menu__list">
+							<li class="menu__item">Help</li>
+							<li class="menu__item">Contact Us</li>
+						</ul>
+					</nav>
+
+				</div>
+			</div>
+
+			<!-- Main navigation -->
+			<nav class="header__row navigation navigation--main">
+				<button type="button" class="navigation__button button icon icon--menu">Menu</button>
+			</nav>
+		</header>
+
 		{% body %}
 
 		<!-- Script includes -->

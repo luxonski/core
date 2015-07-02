@@ -1,0 +1,33 @@
+/*
+	Logo
+	----------------------------------- */
+
+	.logo {
+		display: block;
+		width: em(90px);
+		height: em(12px);
+		text-indent: em(-10000px);
+
+		background: url(/assets/img/logo.png) no-repeat;
+		background-image: linear-gradient(transparent, transparent), url(/assets/img/logo.svg);
+		background-size: em(90px) em(12px);
+
+		// Expand clickable area
+		&--header {
+			width: em(107px);
+			height: em(50px);
+			background-position: 50% 50%;
+		}
+
+		@include breakpoint($breakpoint-tablet) {
+			background: url(/assets/img/logo-large.png) no-repeat;
+			background-image: linear-gradient(transparent, transparent), url(/assets/img/logo-large.svg);
+			background-size: em(183px) em(36px);
+
+			// Reset logo
+			&, &--header {
+				width: em(183px);
+				height: em(36px);
+			}
+		}
+	}

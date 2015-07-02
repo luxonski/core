@@ -1,0 +1,18 @@
+/*
+	Button
+	----------------------------------- */
+
+	.button {
+		margin: 0;
+		padding: 0 em(15px);
+
+		background: map-get($colours, "blue-dark");
+		color: white;
+		border: none;
+		appearance: none;
+		text-transform: uppercase;
+
+		&:hover, &:focus {
+			background-color: map-get($colours, "blue-light");
+		}
+	}

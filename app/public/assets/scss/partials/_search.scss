@@ -1,0 +1,39 @@
+/*
+	Search
+	----------------------------------- */
+
+	.search {
+		position: relative;
+		padding-right: em(95px);
+
+		&__fieldset {
+			margin: 0;
+			padding: 0;
+			border: none;
+		}
+
+		&__input {
+			width: 100%;
+			padding: 0 0 0 em(12px);
+
+			border: solid map-get($colours, "blue-grey-light");
+			border-width: 1px 0 1px 1px;
+			background: white;
+			color: map-get($colours, "blue-grey-light");
+		}
+
+		&__button {
+			position: absolute;
+			top: 0;
+			right: 0;
+
+			width: em(95px);
+		}
+
+		@include breakpoint($breakpoint-tablet) {
+
+			&, &__input, &__button {
+				height: em(36px);
+			}
+		}
+	}

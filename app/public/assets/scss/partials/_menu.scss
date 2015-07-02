@@ -1,0 +1,25 @@
+/*
+	Menu
+	----------------------------------- */
+
+	.menu {
+		$block: #{&};
+
+		// Inline link list
+		&--links {
+
+			#{$block}__list {
+				display: block;
+				margin: 0;
+				padding: 0;
+			}
+
+			#{$block}__item {
+				display: inline-block;
+
+				+ #{$block}__item {
+					margin-left: em(10px);
+				}
+			}
+		}
+	}
