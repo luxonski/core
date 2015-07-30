@@ -2,10 +2,10 @@
 	App launcher
 	------------------------------- */
 
-	define('app', ['loadCSS', 'onloadCSS', 'loadJS'], function(loadCSS, onloadCSS, loadJS) {
+	define('app', ['loadCSS', 'onloadCSS', 'loadJS', 'example1'], function() {
 
 		'use strict';
 
-		// Other modules
-		require(['example']);
+		if (window.console)
+			console.log('Start application');
 	});

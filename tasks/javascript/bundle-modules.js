@@ -20,7 +20,7 @@
 				basePath: '/assets/js/src/partials',
 				configFile: plugins.path.join(paths.assets.js, 'src/config.js'),
 				exclude: [],
-				findNestedDependencies: true,
+				findNestedDependencies: false,
 				paths: {}
 			};
 

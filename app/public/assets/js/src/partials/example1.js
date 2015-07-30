@@ -1,12 +1,12 @@
 /*
-	Example module
+	Example module 1
 	------------------------------- */
 
-	define(['jquery'], function($) {
+	define(['jquery', 'example2', 'example3'], function($) {
 
 		'use strict';
 
 		// Test jQuery dependency
 		if ($ && window.console)
-			console.log('Hello, jQuery is ready');
+			console.log('Example 1 has loaded');
 	});
