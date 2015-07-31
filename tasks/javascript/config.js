@@ -6,31 +6,46 @@
 
 		// Return configuration
 		return {
+			errorDetails: true,
 
-			// AMD modules
-			modules: [
-				plugins.path.join(paths.assets.js, 'src/partials/*.js'),
-				plugins.path.join(paths.assets.js, 'src/main.js')
-			],
+			// Multiple script bundles
+			entry: {
 
-			// Non-AMD modules
-			dependencies: {
+				// Vendor libraries
+				vendor: [
+					'picturefill',
+					'jquery',
+					'loadJS',
+					'loadCSS',
+					'onloadCSS',
+					'webfont'
+				],
 
-				// Minify as-is
-				utilities: {
-					requirejs: plugins.path.join(paths.modules, 'requirejs/require'),
-					picturefill: plugins.path.join(paths.modules, 'picturefill/dist/picturefill'),
-					jquery: plugins.path.join(paths.modules, 'jquery/dist/jquery'),
-					requestAnimationFrame: plugins.path.join(paths.modules, 'jquery.requestAnimationFrame/dist/jquery.requestAnimationFrame')
-				},
-
-				// Wrap as named AMD modules
-				modules: {
-					webfont: plugins.path.join(paths.modules, 'components-webfontloader/webfont'),
-					loadJS: plugins.path.join(paths.modules, 'fg-loadjs/loadJS'),
-					loadCSS: plugins.path.join(paths.modules, 'fg-loadcss/loadCSS'),
-					onloadCSS: plugins.path.join(paths.modules, 'fg-loadcss/onloadCSS')
-				}
+				// Main application
+				main: './app/public/assets/js/src/partials/app'
 			},
+
+			output: {
+				path: plugins.path.join(paths.build, 'assets/js'),
+				publicPath: '/assets/js/',
+				filename: '[name].min.js'
+			},
+
+			resolve: {
+				fallback: plugins.path.join(paths.assets.js, 'src/partials'),
+
+				alias: {
+
+					// Polyfills
+					picturefill: plugins.path.join(paths.modules, 'picturefill/dist/picturefill.js'),
+
+					// Other 3rd party
+					jquery: plugins.path.join(paths.modules, 'jquery/dist/jquery.js'),
+					webfont: plugins.path.join(paths.modules, 'components-webfontloader/webfont.js'),
+					loadJS: plugins.path.join(paths.modules, 'fg-loadjs/loadJS.js'),
+					loadCSS: plugins.path.join(paths.modules, 'fg-loadcss/loadCSS.js'),
+					onloadCSS: plugins.path.join(paths.modules, 'fg-loadcss/onloadCSS.js')
+				}
+			}
 		};
 	};

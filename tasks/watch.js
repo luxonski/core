@@ -25,7 +25,7 @@
 
 			// Watch for JS changes
 			plugins.watch(pathJS, function() {
-				gulp.start('bundle-modules');
+				gulp.start('bundle-javascript');
 			});
 
 			// Watch for HTML changes
